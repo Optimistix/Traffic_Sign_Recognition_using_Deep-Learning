@@ -15,9 +15,13 @@ Humans are capable of recognizing the large variety of existing road signs with 
 Data is available from multiple resources:
 
 (1) https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
+
 (2) https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/published-archive.html (the original resource)
+
 and
+
 (3) https://huggingface.co/datasets/bazyl/GTSRB
+
 
 <b> Note: The dataset is too big to upload to the project's GitHub repository. Please use wget to obtain a local copy: </b>
 
@@ -94,11 +98,11 @@ to test the saved model on 1 sample
 
 Build the Docker container:
 
-        docker build -t brain_cancer_detection .
+        docker build -t traffic_sign_recognition .
 
 Run the Docker container:
 
-        docker run -it -p 8080:8080 brain_cancer_detection:latest
+        docker run -it -p 8080:8080 traffic_sign_recognition:latest
 
 As before, to test that the prediction app is running properly via Docker, you can type
 
