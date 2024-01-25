@@ -1,5 +1,5 @@
-# Brain_Tumor_Detection_using_MRI_Images
-Deep Learning (Convolutional Neural Networks) to predict whether an MRI image is from a tumorous or non-tumorous sample 
+# Deep Learning (Convolutional Neural Networks) for Traffic Sign Recognition
+Deep Learning (Convolutional Neural Networks) for Traffic Sign Recognition 
 
 ## Problem Description
 Recognition of traffic signs is a challenging real-world problem of high industrial relevance. Although commercial systems have reached the market and several studies on this topic have been published, systematic unbiased comparisons of different approaches are missing and comprehensive benchmark datasets are not freely available.
