@@ -14,7 +14,7 @@ from urllib import request
 from PIL import Image
 
 
-MODEL_NAME = os.getenv('MODEL_NAME', 'convnet_from_scratch_with_a_dropout_layer_keras.tflite')
+MODEL_NAME = os.getenv('MODEL_NAME', 'convnet_from_scratch_with_a_dropout_layer.keras.tflite')
 
 
 def download_image(url):
