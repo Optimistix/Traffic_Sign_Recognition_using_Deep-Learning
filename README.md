@@ -19,6 +19,22 @@ Data is available from multiple resources:
 and
 (3) https://huggingface.co/datasets/bazyl/GTSRB
 
+<b> Note: The dataset is too big to upload to the project's GitHub repository. Please use wget to obtain a local copy: </b>
+
+wget www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign/download/archive.zip
+
+and
+
+wget https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/GTSRB_label_names.csv
+
+followed by 
+
+unzip archive.zip
+
+in the same ("top level") directory where you download/place GTSRB_label_names.csv.
+
+After this, the code should run as provided.
+
 ## Script train.py
 The script train.py can be used to:
         Train the final model
