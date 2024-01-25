@@ -11,8 +11,18 @@ The classifier has to cope with large variations in visual appearances due to il
 Humans are capable of recognizing the large variety of existing road signs with close to 100% correctness. This does not only apply to real-world driving, which provides both context and multiple views of a single traffic sign, but also to the recognition from single images.
 
 ## Data
+The German Traffic Sign Benchmark (GTSRB) is a multi-class, single-image classification challenge held at the International Joint Conference on Neural Networks (IJCNN) 2011. GTSRB has the following properties:
 
-Data is available from multiple resources:
+Single-image, multi-class classification problem
+
+More than 40 classes
+
+More than 50,000 images in total
+
+Large, lifelike database
+
+
+GTSRB Data is available from multiple resources:
 
 (1) https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
 
