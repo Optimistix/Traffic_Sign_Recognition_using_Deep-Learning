@@ -59,8 +59,8 @@ The script convert.py can be used to:
         Load the model previously saved in .h5 format, convert it tflite format, and save
 
 
-## Script predict.py
-The script predict.py can be used to:
+## Script predict_from_inside_Docker.py
+The script predict_from_inside_Docker.py can be used to:
         Load the model (for use within Docker)
         Define the Lambda handler
 
@@ -99,7 +99,7 @@ Now run
         python train.py
 to train and save the best model, and
 
-        python predict.py
+        python predict_from_inside_Docker.py
         python test.py
 
 to test the saved model on 1 sample

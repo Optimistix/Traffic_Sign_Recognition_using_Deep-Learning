@@ -2,8 +2,8 @@
 # coding: utf-8
 
 # Use first line below for local deployment, the second one for Docker
-import tensorflow.lite as tflite
-#import tflite_runtime.interpreter as tflite
+#import tensorflow.lite as tflite
+import tflite_runtime.interpreter as tflite
 
 import os
 import numpy as np
@@ -13,13 +13,13 @@ from urllib import request
 
 from PIL import Image
 
-from tensorflow import keras
+#from tensorflow import keras
 
 
 MODEL_NAME = os.getenv('MODEL_NAME', 'convnet_from_scratch_with_a_dropout_layer.keras.tflite')
 
-model_file = 'convnet_from_scratch_with_a_dropout_layer.keras.h5'
-model = keras.models.load_model(model_file)
+#model_file = 'convnet_from_scratch_with_a_dropout_layer.keras.h5'
+#model = keras.models.load_model(model_file)
 
 
 #classes = np.array(['Speed limit 20km/h',
@@ -107,24 +107,25 @@ def predict(url):
     interpreter.set_tensor(input_index, X)
     interpreter.invoke()
 
-    #preds = interpreter.get_tensor(output_index)
+    preds = interpreter.get_tensor(output_index)
+    #preds = interpreter.get_tensor(output_index).round(4)
  
     #predictions = classes[preds.argmax(axis=0)]
-    #predictions = classes[np.argmax(preds)]
+    predictions = classes[np.argmax(preds)]
 
-    preds = model.predict(X).round(4)
+    #preds = model.predict(X).round(4)
 
-    float_predictions = preds[0].tolist()
+    #float_predictions = preds[0].tolist()
 
-    i = np.argmax(float_predictions)
+    #i = np.argmax(float_predictions)
 
-    preds_dict =  dict(zip(classes, float_predictions))
-    predicted_class = list(preds_dict.keys())[i]
-    probability_of_predicted_class = preds_dict[list(preds_dict.keys())[i]]
-    return(predicted_class, probability_of_predicted_class)
+    #preds_dict =  dict(zip(classes, float_predictions))
+    #predicted_class = list(preds_dict.keys())[i]
+    #probability_of_predicted_class = preds_dict[list(preds_dict.keys())[i]]
+    #return(predicted_class, probability_of_predicted_class)
     #return classes[i]
     #return preds
-    #return predictions
+    return predictions
 
 
 def lambda_handler(event, context):
@@ -132,15 +133,13 @@ def lambda_handler(event, context):
     pred = predict(url)
     
     result = {
-        'Predicted Class and its probability': pred
+        'Predicted': pred
     }
 
     return result
 
 
 link = 'https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/00051.png'
-#link = 'https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/00062.png'
-#link = 'https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/00004_00000_00007.png'
 
 event = {'url':link}
 print(lambda_handler(event, None))
