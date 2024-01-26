@@ -74,7 +74,7 @@ You can execute predict_outside_Docker.py to locally test the model on a single 
 
 The expected output is
 
-{'Predicted Class and its probability': ('Yield', 0.5504000186920166)}
+{'Predicted': 'Yield'}
 
 ## Files with dependencies
         Pipenv and Pipenv.lock
@@ -122,7 +122,7 @@ to test the saved model on 1 sample (a traffic sign)
 
 and the expected output is
 
-{'Predicted Class and its probability': ('Yield', 0.5504000186920166)}
+{'Predicted': 'Yield'}
 
 ## Deployment
 
@@ -146,14 +146,15 @@ to test the saved model on 1 sample (a traffic sign)
 
 and the expected output is (as before)
 
-{'Predicted Class and its probability': ('Yield', 0.5504000186920166)}
+{'Predicted': 'Yield'}
 
 Here are screenshots of the service created on AWS (Lambda function creation, Lambda function testing, API creation, Local testing using test_AWS.py):
 
-<img src="https://raw.githubusercontent.com/Optimistix/Brain_Tumor_Detection_using_MRI_Images_from_Kaggle_Br35H/main/AWS_Lambda_Function_Created.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
+<img src="https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/AWS_Lambda_Function_Created.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
 
-<img src="https://raw.githubusercontent.com/Optimistix/Brain_Tumor_Detection_using_MRI_Images_from_Kaggle_Br35H/main/AWS_Lambda_Function_Tested.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
+<img src="https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/AWS_Lambda_Function_Tested.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
 
-<img src="https://raw.githubusercontent.com/Optimistix/Brain_Tumor_Detection_using_MRI_Images_from_Kaggle_Br35H/main/AWS_Lambda_Function_Tested_Locally_using_AWS_URL.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
+<img src="https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/AWS_API_Gateway_Resource_Tested.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
+<img src="https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/AWS_Lambda_Function_Tested_Locally_using_AWS_URL.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
 and finally, a traffic sign that was used for testing:
 <img src="https://raw.githubusercontent.com/Optimistix/Traffic_Sign_Recognition_using_Deep-Learning/main/00051.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:100%">
